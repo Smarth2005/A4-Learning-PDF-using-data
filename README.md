@@ -77,7 +77,7 @@ To quantitatively evaluate similarity between the real distribution and GAN-gene
 KL divergence measures how much one probability distribution differs from another reference distribution. It is defined as:
 
 $$
-D_{KL}(P || Q) = \sum_{i} P(i)\log\left(\frac{P(i)}{Q(i)}\right)
+D_{KL}(P \Vert Q) = \sum_{i} P(i)\log\left(\frac{P(i)}{Q(i)}\right)
 $$
 
 #### 2. Jensen–Shannon (JS) Divergence
