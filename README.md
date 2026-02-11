@@ -147,7 +147,30 @@ The KDE-based probability density estimation shows that the GAN-generated distri
 | KL Divergence | inf    |
 | JS Divergence | 0.0010 |
 
-## 5. Conclusion
+## 5. Observations
+
+### 5.1 Mode Coverage
+
+From the KDE plot, the real PDF and GAN-generated PDF show a single dominant peak (mode) around $𝑧 ≈ 10$ to $z ≈ 20$. The generated distribution successfully captures this main peak and follows the overall shape of the real distribution.
+This indicates that the GAN has achieved **good mode coverage**, and no major mode collapse is observed.
+
+### 5.2 Training Stability
+
+The generated PDF curve is smooth and closely aligned with the real curve across most regions, which suggests that GAN training was stable.
+There are no abnormal spikes, oscillations, or discontinuities in the generated density curve, indicating that the generator and discriminator maintained a balanced learning process.
+
+Thus, the training process appears stable without divergence or collapse.
+
+### 5.3 Quality of Generated Distribution
+
+The generated PDF overlaps very closely with the real PDF, especially in the high-density region (0–60), where most data points lie.
+A slight mismatch is visible near the peak where the real distribution reaches a slightly higher density than the generated one.
+
+In the tail region $(z>60)$, both curves decay similarly and remain nearly identical, showing that the GAN also learned the long-tail behavior reasonably well.
+
+Overall, the GAN-generated distribution shows **high-quality approximation** of the real distribution.
+
+## 6. Conclusion
 
 This experiment confirms that a GAN can successfully learn and reproduce the probability distribution of real-world environmental data. The close overlap between the KDE-estimated real and generated PDFs demonstrates effective distribution learning.
 
