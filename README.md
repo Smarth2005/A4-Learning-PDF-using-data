@@ -2,7 +2,11 @@
 
 ## 1. Task Description
 
+<div align="justify">
+  
 The objective of this assignment is to learn and replicate the probability distribution of real-world environmental sensor data using a Generative Adversarial Network (GAN). The task focuses on modeling the feature distribution of the transformed variable $z$ and generating synthetic samples that closely resemble the real data distribution.
+
+</div>
 
 Workflow: <br>
 (a) Mapping the original feature $x$ to a transformed variable $z$ using a roll-number-dependent sine function.<br>
@@ -68,9 +72,12 @@ Over time, the generator learns to produce samples whose distribution closely ma
 
 ### 2.4 PDF Estimation using Kernel Density Estimation (KDE)
 
+<div align="justify">
+  
 Since GAN outputs are discrete generated samples, a smooth Probability Density Function (PDF) is estimated using Gaussian Kernel Density Estimation (`gaussian_kde`). KDE provides a continuous density curve, making it suitable for comparing real and generated distributions.
 
 To quantitatively evaluate similarity between the real distribution and GAN-generated distribution, divergence-based metrics were computed using `scipy.stats`.
+</div>
 
 #### 1. Kullback–Leibler (KL) Divergence
 
@@ -149,6 +156,8 @@ The KDE-based probability density estimation shows that the GAN-generated distri
 
 ## 5. Observations
 
+<div align="justify">
+  
 ### 5.1 Mode Coverage
 
 From the KDE plot, the real PDF and GAN-generated PDF show a single dominant peak (mode) around $𝑧 ≈ 10$ to $z ≈ 20$. The generated distribution successfully captures this main peak and follows the overall shape of the real distribution.
@@ -175,3 +184,4 @@ Overall, the GAN-generated distribution shows **high-quality approximation** of 
 This experiment confirms that a GAN can successfully learn and reproduce the probability distribution of real-world environmental data. The close overlap between the KDE-estimated real and generated PDFs demonstrates effective distribution learning.
 
 The Jensen–Shannon divergence value of 0.0010 further indicates that the generator has achieved a high-quality approximation of the real data distribution.
+</div>
